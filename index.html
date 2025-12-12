@@ -8,76 +8,57 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="nav-brand">Olivia Floody</div>
+        <a href="index.html" class="nav-brand">Olivia Floody</a>
         <ul class="nav-links">
-            <li><a href="index.html">Projects</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
             <li><a href="research.html">Research</a></li>
             <li><a href="travels.html">Travels</a></li>
         </ul>
     </nav>
 
-    <div class="container">
-        <aside class="sidebar">
-            <div class="profile">
-                <div class="profile-photo">
-                    <img src="profile.jpg" alt="Olivia Floody" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="profile-placeholder">OF</div>
-                </div>
-                <h1>Olivia Floody</h1>
-                <p class="bio">Hi! I'm an engineer learning to do research.</p>
-
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/olivia-floody-a7b5a4154/" target="_blank" class="social-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                        </svg>
-                        LinkedIn
-                    </a>
-
-                    <a href="mailto:oliviafloody@gmail.com" class="social-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/>
-                        </svg>
-                        Email
-                    </a>
-                </div>
+    <div class="home-container">
+        <div class="home-content">
+            <div class="profile-photo-home">
+                <img src="profile.jpg" alt="Olivia Floody" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="profile-placeholder">OF</div>
             </div>
-        </aside>
+            <h1>Olivia Floody</h1>
+            <p class="bio-home">Hi! I'm an engineer learning to do research.</p>
 
-        <main class="main-content">
-            <section id="projects">
-                <h2>Projects</h2>
-                <button class="theme-toggle theme-toggle-projects" aria-label="Toggle theme">
-                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="5"/>
-                        <line x1="12" y1="1" x2="12" y2="3"/>
-                        <line x1="12" y1="21" x2="12" y2="23"/>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-                        <line x1="1" y1="12" x2="3" y2="12"/>
-                        <line x1="21" y1="12" x2="23" y2="12"/>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            <div class="social-links-home">
+                <a href="https://www.linkedin.com/in/olivia-floody-a7b5a4154/" target="_blank" class="social-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                     </svg>
-                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-                    </svg>
-                </button>
+                    LinkedIn
+                </a>
 
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="oasis.jpg" alt="Oasis" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="project-image-placeholder">Oasis</div>
-                        </div>
-                        <div class="project-content">
-                            <h3>Oasis</h3>
-                            <p>Co-founded Oasis, an eight-week educational program for students with no prior experience who want to build their first website or app. The program pairs participants with mentors and teammates, providing structured learning through weekly "Hack Sessions." Originally founded in Fall 2020 as a Sandbox program with virtual workshops and mentor networks, Oasis evolved and became an independent club in Spring 2023. The organization is built on three core principles: remaining accessible to all learners, emphasizing metacognitive skills over specific frameworks, and believing that the best way to learn is to learn by doing.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
+                <a href="mailto:oliviafloody@gmail.com" class="social-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/>
+                    </svg>
+                    Email
+                </a>
+            </div>
+
+            <button class="theme-toggle theme-toggle-home" aria-label="Toggle theme">
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"/>
+                    <line x1="12" y1="1" x2="12" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/>
+                    <line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>
+                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </button>
+        </div>
     </div>
 
     <script src="script.js"></script>
