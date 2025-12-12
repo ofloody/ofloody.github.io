@@ -1,51 +1,17 @@
-// Smooth scroll for navigation links
+// Page initialization
 document.addEventListener('DOMContentLoaded', function() {
+    // Highlight active nav link based on current page
     const navLinks = document.querySelectorAll('.nav-links a');
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
     navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-
-            if (targetSection) {
-                const navbarHeight = document.querySelector('.navbar').offsetHeight;
-                const targetPosition = targetSection.offsetTop - navbarHeight - 20;
-
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
+        const linkPage = link.getAttribute('href');
+        if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
+            link.classList.add('active');
+        }
     });
 
-    // Highlight active nav link on scroll
-    const sections = document.querySelectorAll('section');
-
-    function highlightNavLink() {
-        const scrollPosition = window.scrollY;
-
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
-            const sectionBottom = sectionTop + section.offsetHeight;
-            const sectionId = section.getAttribute('id');
-
-            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${sectionId}`) {
-                        link.classList.add('active');
-                    }
-                });
-            }
-        });
-    }
-
-    window.addEventListener('scroll', highlightNavLink);
-
-    // Add fade-in animation for update items and project cards on scroll
+    // Add fade-in animation for project cards on scroll
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -61,14 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
 
     // Apply initial styles and observe
-    const updateItems = document.querySelectorAll('.update-item');
-    updateItems.forEach((item, index) => {
-        item.style.opacity = '0';
-        item.style.transform = 'translateY(20px)';
-        item.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
-        observer.observe(item);
-    });
-
     const projectCards = document.querySelectorAll('.project-card');
     projectCards.forEach((card, index) => {
         card.style.opacity = '0';
