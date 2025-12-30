@@ -580,7 +580,7 @@ html {
 .home-container h2 {
     font-size: 1.75rem;
     color: var(--primary-color);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid var(--border-color);
     width: 100%;
