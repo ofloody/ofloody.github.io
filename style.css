@@ -387,6 +387,11 @@ body.dark-theme .theme-toggle .sun-icon {
     border-radius: 8px;
 }
 
+.project-image img:only-of-type {
+    width: 100%;
+    object-fit: contain;
+}
+
 .project-image-placeholder {
     width: 100%;
     height: 100%;
@@ -549,7 +554,7 @@ html {
     justify-content: flex-start;
     min-height: calc(100vh - 65px);
     padding: 3rem 2rem;
-    gap: 4rem;
+    gap: 1.5rem;
 }
 
 .home-content {
@@ -580,11 +585,16 @@ html {
 .home-container h2 {
     font-size: 1.75rem;
     color: var(--primary-color);
-    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid var(--border-color);
     width: 100%;
     max-width: 1200px;
+}
+
+.home-container .projects-grid {
+    margin-top: 1rem;
 }
 
 .home-content h1 {
