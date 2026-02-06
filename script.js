@@ -11,6 +11,19 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Scroll reveal
+    const revealElements = document.querySelectorAll('.project-card, .section-title');
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
     // Theme Toggle
     const themeToggles = document.querySelectorAll('.theme-toggle');
 
