@@ -20,30 +20,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 revealObserver.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.15 });
+    }, { threshold: 0.12 });
 
     revealElements.forEach(el => revealObserver.observe(el));
 
-    // Theme Toggle
+    // Theme Toggle — dark is default, light-theme class enables light mode
     const themeToggles = document.querySelectorAll('.theme-toggle');
-
-    // Check for saved theme preference or default to 'light' mode
-    const currentTheme = localStorage.getItem('theme') || 'light';
-    if (currentTheme === 'dark') {
-        document.body.classList.add('dark-theme');
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    if (savedTheme === 'light') {
+        document.body.classList.add('light-theme');
     }
 
-    // Add click event to all theme toggle buttons
     themeToggles.forEach(toggle => {
         toggle.addEventListener('click', function() {
-            document.body.classList.toggle('dark-theme');
-
-            // Save the theme preference
-            if (document.body.classList.contains('dark-theme')) {
-                localStorage.setItem('theme', 'dark');
-            } else {
-                localStorage.setItem('theme', 'light');
-            }
+            document.body.classList.toggle('light-theme');
+            localStorage.setItem('theme', document.body.classList.contains('light-theme') ? 'light' : 'dark');
         });
     });
 });
