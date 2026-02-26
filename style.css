@@ -25,8 +25,8 @@ html {
     --color-surface2: #201810;
     --color-text: #EDE0C8;
     --color-text-muted: #8A7A68;
-    --color-primary: #C8602A;
-    --color-primary-light: #E07848;
+    --color-primary: #58AE8A;
+    --color-primary-light: #72C29E;
     --color-secondary: #4EADA0;
     --color-border: #2A2018;
     --color-border-strong: #3A2E22;
@@ -43,8 +43,8 @@ body.light-theme {
     --color-surface2: #EDE4D4;
     --color-text: #1A1208;
     --color-text-muted: #6B5C4A;
-    --color-primary: #A84A18;
-    --color-primary-light: #C06030;
+    --color-primary: #2E7558;
+    --color-primary-light: #3E8A6A;
     --color-secondary: #3A8A7E;
     --color-border: #D8CABB;
     --color-border-strong: #C0B0A0;
@@ -285,7 +285,7 @@ body.light-theme .theme-toggle .sun-icon {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(160deg, rgba(200,96,42,0.07) 0%, transparent 60%);
+    background: linear-gradient(160deg, rgba(88,174,138,0.07) 0%, transparent 60%);
     pointer-events: none;
 }
 
