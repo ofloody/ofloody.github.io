@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experience - Olivia Floody</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Share+Tech+Mono&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .exp-page {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 5rem 3rem 6rem;
+      }
+
+      .exp-page-title {
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 0.68rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--color-text-muted);
+        margin-bottom: 3rem;
+      }
+
+      .exp-section {
+        margin-bottom: 3.5rem;
+      }
+
+      .exp-section-rule {
+        height: 1px;
+        background: var(--color-border);
+        margin-bottom: 1.25rem;
+      }
+
+      .exp-section-label {
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 0.62rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--color-primary);
+        margin-bottom: 1.25rem;
+        padding-bottom: 0.6rem;
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      .exp-entry {
+        display: grid;
+        grid-template-columns: 160px 1fr;
+        gap: 0 2rem;
+        padding: 1.25rem 0;
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      .exp-entry:last-child {
+        border-bottom: none;
+      }
+
+      .exp-meta {
+        padding-top: 0.15rem;
+      }
+
+      .exp-date {
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 0.67rem;
+        color: var(--color-text-muted);
+        line-height: 1.5;
+      }
+
+      .exp-org {
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 0.67rem;
+        color: var(--color-text-muted);
+        margin-top: 0.25rem;
+      }
+
+      .exp-body {
+      }
+
+      .exp-title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--color-text);
+        margin-bottom: 0.4rem;
+        letter-spacing: -0.01em;
+      }
+
+      .exp-desc {
+        font-size: 0.88rem;
+        color: var(--color-text-muted);
+        line-height: 1.7;
+        margin: 0;
+      }
+
+      .exp-role {
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 0.72rem;
+        color: var(--color-text-muted);
+        margin-bottom: 0.6rem;
+      }
+
+      .exp-list {
+        margin: 0;
+        padding-left: 1.1rem;
+        font-size: 0.88rem;
+        color: var(--color-text-muted);
+        line-height: 1.75;
+      }
+
+      .exp-list li {
+        margin-bottom: 0.35rem;
+      }
+
+      .exp-list li:last-child {
+        margin-bottom: 0;
+      }
+
+      @media (max-width: 600px) {
+        .exp-page {
+          padding: 3rem 1.25rem 4rem;
+        }
+
+        .exp-entry {
+          grid-template-columns: 1fr;
+          gap: 0.3rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="index.html" class="nav-brand">Olivia Floody</a>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="experience.html" class="active">Experience</a></li>
+          <li><a href="travels.html">Travels</a></li>
+        </ul>
+        <button class="theme-toggle" aria-label="Toggle theme">
+          <svg
+            class="sun-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+          <svg
+            class="moon-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <div class="exp-page">
+      <p class="exp-page-title">Experience</p>
+
+      <div class="exp-section">
+        <div class="exp-section-rule"></div>
+        <div class="exp-entry">
+          <div class="exp-meta">
+            <div class="exp-date">Dec 2025 – Present</div>
+          </div>
+          <div class="exp-body">
+            <div class="exp-title">Bau Lab, Northeastern University</div>
+            <div class="exp-role">Independent Research</div>
+            <ul class="exp-list">
+              <li>
+                Conducting independent research in Professor David Bau's lab on
+                interpreting large deep learning models
+              </li>
+              <li>
+                Applying interpretability techniques to investigate unexplored
+                questions in LLM decision-making, inspired by prior experience
+                building and deploying production AI systems
+              </li>
+              <li>
+                Collaborating with lab members on ongoing research and engaging
+                with the broader AI academic community
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-entry">
+          <div class="exp-meta">
+            <div class="exp-date">Jan 2024 – Aug 2025</div>
+          </div>
+          <div class="exp-body">
+            <div class="exp-title">Palantir Technologies</div>
+            <div class="exp-role">Forward Deployed Software Engineer</div>
+            <ul class="exp-list">
+              <li>
+                Led engineering efforts for a $10 million pilot program
+                involving development and deployment of the first-of-its-kind
+                Multi-Agent AI workflow, driving innovation in automated
+                decision-making systems
+              </li>
+              <li>
+                Supported critical operations for federal government agencies
+                while taking ownership of critical deliverables that directly
+                impacted organizational operations and policy decisions
+              </li>
+              <li>
+                Architected end-to-end solutions spanning data integration,
+                custom web applications, and strategic planning directly with
+                subject experts and executives to translate complex requirements
+                into technical implementations
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-entry">
+          <div class="exp-meta">
+            <div class="exp-date">Jan 2022 – Aug 2022</div>
+          </div>
+          <div class="exp-body">
+            <div class="exp-title">The Routing Company</div>
+            <div class="exp-role">Back-End Engineering Co-op</div>
+            <ul class="exp-list">
+              <li>
+                Extended vehicle routing algorithm to consider factors weighted
+                by significance to each area
+              </li>
+              <li>
+                Scaled existing Google Cloud infrastructure by assisting team
+                with vulnerability patches
+              </li>
+              <li>
+                Increased transparency of data and system performance key to
+                investigating irregularities
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="exp-section">
+        <p class="exp-section-label">Education</p>
+
+        <div class="exp-entry">
+          <div class="exp-meta">
+            <div class="exp-date">Sept 2019 – May 2023</div>
+          </div>
+          <div class="exp-body">
+            <div class="exp-title">
+              BS Computer Science, Northeastern University
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
